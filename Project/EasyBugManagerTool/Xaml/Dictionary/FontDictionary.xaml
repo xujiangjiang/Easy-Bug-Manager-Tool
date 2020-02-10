@@ -1,0 +1,13 @@
+﻿<!-- 所有的字体 -->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:EasyBugManagerTool">
+
+    <!--字体：站酷黄油体-->
+    <FontFamily x:Key="ZcoolButter.FontFamily">/EasyBugManagerTool;component/Asset/Font/#zcoolqingkehuangyouti</FontFamily>
+
+    <!--字体：站酷文艺体-->
+    <FontFamily x:Key="ZcoolLiterary.FontFamily">/EasyBugManagerTool;component/Asset/Font/#zcoolwenyiti</FontFamily>
+
+
+</ResourceDictionary>
