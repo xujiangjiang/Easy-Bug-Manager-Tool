@@ -21,7 +21,7 @@
 
 最新版本： v0.1.0.0 (2020年02月29日)
 
-下载地址：[点击下载v0.1.0.0版本](https://github.com/xujiangjiang/Easy-Bug-Manager-Tool/releases/download/v0.1.0.0/Easy.Bug.Manager.Tool.v0.1.0.0.exe)
+下载地址：[点击下载v0.1.0.0版本](https://github.com/xujiangjiang/Easy-Bug-Manager-Tool/releases/download/v0.1.0.0/Easy.Bug.Manager.Tool.v0.1.0.0.zip)
 
 <br/>
 

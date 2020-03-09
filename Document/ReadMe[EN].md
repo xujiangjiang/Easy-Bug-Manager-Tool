@@ -16,7 +16,7 @@ This software is used for repair projects and conversion projects (belonging to 
 
 Latest version: v0.1.0.0 (February 29, 2020)
 
-Download link: [Click to download v0.1.0.0 version](https://github.com/xujiangjiang/Easy-Bug-Manager-Tool/releases/download/v0.1.0.0/Easy.Bug.Manager.Tool.v0.1.0.0.exe)
+Download link: [Click to download v0.1.0.0 version](https://github.com/xujiangjiang/Easy-Bug-Manager-Tool/releases/download/v0.1.0.0/Easy.Bug.Manager.Tool.v0.1.0.0.zip)
 
 <br/>
 
