@@ -20,9 +20,9 @@ This software is used for repair projects and conversion projects (belonging to 
 
 ## Download
 
-Latest version: v0.0.1.0 (February 9, 2020)
+Latest version: v0.0.1.0 (February 29, 2020)
 
-Download link: [Click to download v0.0.1.0 version](https://github.com/xujiangjiang/Easy-Bug-Manager-Tool/releases/download/v0.0.1.0/Easy.Bug.Manager.Tool.v0.0.1.0.zip)
+Download link: [Click to download v0.1.0.0 version](https://github.com/xujiangjiang/Easy-Bug-Manager-Tool/releases/download/v0.1.0.0/Easy.Bug.Manager.Tool.v0.1.0.0.exe)
 
 <br/>
 
@@ -44,7 +44,7 @@ Note: The repair may not be successful. Couldn't repair picture.
 
 Click the [Repair Project] button in the Tool to start repairing the project!
 
-![修复项目](Document/Image/1.png)
+![Image](Document/Image/1.png)
 
 <br/>
 
@@ -62,7 +62,7 @@ You can use the "Convert Project" features to convert the project.
 
 Click the [Convert Project] button in the Tool to start converting projects!
 
-![转换项目](Document/Image/2.png)
+![Image](Document/Image/2.png)
 
 <br/>
 

@@ -19,9 +19,9 @@
 
 ## 下载
 
-最新版本： v0.0.1.0 (2020年02月09日)
+最新版本： v0.1.0.0 (2020年02月29日)
 
-下载地址：[点击下载v0.0.1.0版本](https://github.com/xujiangjiang/Easy-Bug-Manager-Tool/releases/download/v0.0.1.0/Easy.Bug.Manager.Tool.v0.0.1.0.zip)
+下载地址：[点击下载v0.1.0.0版本](https://github.com/xujiangjiang/Easy-Bug-Manager-Tool/releases/download/v0.1.0.0/Easy.Bug.Manager.Tool.v0.1.0.0.exe)
 
 <br/>
 
@@ -41,7 +41,7 @@
 
 点击小工具中的[修复项目]按钮，就可以开始对项目进行修复啦！
 
-![修复项目](/Image/1.png)
+![Image](/Image/1.png)
 
 <br/>
 
@@ -59,7 +59,7 @@
 
 点击小工具中的[转换项目]按钮，就可以开始对项目进行转换啦！
 
-![转换项目](/Image/2.png)
+![Image](/Image/2.png)
 
 <br/>
 

@@ -1,0 +1,66 @@
+﻿<!--中文的图片-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:EasyBugManagerTool">
+
+    <!--文字：主界面-->
+    <ImageBrush x:Key="MainUi.Text.Logo.ImageBrush"
+                ImageSource="/EasyBugManagerTool;component/Asset/Image/MainUi/Logo-CN.png"></ImageBrush>
+
+    <ImageBrush x:Key="MainUi.Text.ConvertButton.MouseEnter.ImageBrush"
+                ImageSource="/EasyBugManagerTool;component/Asset/Image/MainUi/ConvertButton-MouseEnter-CN.png"></ImageBrush>
+    <ImageBrush x:Key="MainUi.Text.ConvertButton.MouseLeave.ImageBrush"
+                ImageSource="/EasyBugManagerTool;component/Asset/Image/MainUi/ConvertButton-MouseLeave-CN.png"></ImageBrush>
+
+    <ImageBrush x:Key="MainUi.Text.RepairButton.MouseEnter.ImageBrush"
+                ImageSource="/EasyBugManagerTool;component/Asset/Image/MainUi/RepairButton-MouseEnter-CN.png"></ImageBrush>
+    <ImageBrush x:Key="MainUi.Text.RepairButton.MouseLeave.ImageBrush"
+                ImageSource="/EasyBugManagerTool;component/Asset/Image/MainUi/RepairButton-MouseLeave-CN.png"></ImageBrush>
+
+
+
+    <!--文字：设置界面-->
+    <ImageBrush x:Key="SettingsUi.Text.Chinese.Checked.ImageBrush"
+                ImageSource="/EasyBugManagerTool;component/Asset/Image/SettingsUi/Chinese-Checked-CN.png"></ImageBrush>
+    <ImageBrush x:Key="SettingsUi.Text.Chinese.MouseEnter.ImageBrush"
+                ImageSource="/EasyBugManagerTool;component/Asset/Image/SettingsUi/Chinese-MouseEnter-CN.png"></ImageBrush>
+    <ImageBrush x:Key="SettingsUi.Text.Chinese.MouseLeave.ImageBrush"
+                ImageSource="/EasyBugManagerTool;component/Asset/Image/SettingsUi/Chinese-MouseLeave-CN.png"></ImageBrush>
+
+    <ImageBrush x:Key="SettingsUi.Text.English.Checked.ImageBrush"
+                ImageSource="/EasyBugManagerTool;component/Asset/Image/SettingsUi/English-Checked-EN.png"></ImageBrush>
+    <ImageBrush x:Key="SettingsUi.Text.English.MouseEnter.ImageBrush"
+                ImageSource="/EasyBugManagerTool;component/Asset/Image/SettingsUi/English-MouseEnter-EN.png"></ImageBrush>
+    <ImageBrush x:Key="SettingsUi.Text.English.MouseLeave.ImageBrush"
+                ImageSource="/EasyBugManagerTool;component/Asset/Image/SettingsUi/English-MouseLeave-EN.png"></ImageBrush>
+
+    <ImageBrush x:Key="SettingsUi.Text.Off.Checked.ImageBrush"
+                ImageSource="/EasyBugManagerTool;component/Asset/Image/SettingsUi/Off-Checked-CN.png"></ImageBrush>
+    <ImageBrush x:Key="SettingsUi.Text.Off.MouseEnter.ImageBrush"
+                ImageSource="/EasyBugManagerTool;component/Asset/Image/SettingsUi/Off-MouseEnter-CN.png"></ImageBrush>
+    <ImageBrush x:Key="SettingsUi.Text.Off.MouseLeave.ImageBrush"
+                ImageSource="/EasyBugManagerTool;component/Asset/Image/SettingsUi/Off-MouseLeave-CN.png"></ImageBrush>
+
+    <ImageBrush x:Key="SettingsUi.Text.On.Checked.ImageBrush"
+                ImageSource="/EasyBugManagerTool;component/Asset/Image/SettingsUi/On-Checked-CN.png"></ImageBrush>
+    <ImageBrush x:Key="SettingsUi.Text.On.MouseEnter.ImageBrush"
+                ImageSource="/EasyBugManagerTool;component/Asset/Image/SettingsUi/On-MouseEnter-CN.png"></ImageBrush>
+    <ImageBrush x:Key="SettingsUi.Text.On.MouseLeave.ImageBrush"
+                ImageSource="/EasyBugManagerTool;component/Asset/Image/SettingsUi/On-MouseLeave-CN.png"></ImageBrush>
+
+    <ImageBrush x:Key="SettingsUi.Text.Option.Language.ImageBrush"
+                ImageSource="/EasyBugManagerTool;component/Asset/Image/SettingsUi/Option-Language-CN.png"></ImageBrush>
+    <ImageBrush x:Key="SettingsUi.Text.Option.Sound.ImageBrush"
+                ImageSource="/EasyBugManagerTool;component/Asset/Image/SettingsUi/Option-Sound-CN.png"></ImageBrush>
+
+    <ImageBrush x:Key="SettingsUi.Text.Tool.ImageBrush"
+                ImageSource="/EasyBugManagerTool;component/Asset/Image/SettingsUi/Tool-CN.png"></ImageBrush>
+
+
+
+    <!--文字：转换界面-->
+    <ImageBrush x:Key="ConvertUi.Text.Tip.ImageBrush"
+                ImageSource="/EasyBugManagerTool;component/Asset/Image/ConvertUi/Text-Tip-CN.png"></ImageBrush>
+
+
+</ResourceDictionary>

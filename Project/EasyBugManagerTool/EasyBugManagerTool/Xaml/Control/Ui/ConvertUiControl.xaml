@@ -1,0 +1,183 @@
+﻿<!--界面：转换项目界面-->
+<UserControl x:Class="EasyBugManagerTool.ConvertUiControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EasyBugManagerTool"
+             mc:Ignorable="d" 
+             d:DesignHeight="1002" d:DesignWidth="1440"
+             
+             Name="ConvertUiUserControl">
+
+    <Grid>
+
+        <!--背景：白色-->
+        <Border Name="BackgroundBorder"
+                    Width="580" Height="420" 
+                    VerticalAlignment="Center"
+                    Background="White" CornerRadius="15"
+                    Opacity="1">
+            <Border.Effect>
+                <DropShadowEffect Direction="0" ShadowDepth="0" BlurRadius="20" 
+                                      Opacity="0.25" Color="#FF5B5B5B"></DropShadowEffect>
+            </Border.Effect>
+        </Border>
+
+
+        <!--内容-->
+        <Grid Width="580" Height="420"
+                        VerticalAlignment="Center">
+
+
+            <!--文字：标题-->
+            <TextBlock Margin="39.5,20,0,0"
+                               VerticalAlignment="Top" HorizontalAlignment="Left"
+                               Text="{Binding ElementName=ConvertUiUserControl,Path=TitleString}"
+                               FontFamily="{StaticResource ZcoolButter.FontFamily}"
+                               FontSize="31" Foreground="#787878"/>
+
+
+            <!--浏览-->
+            <StackPanel Orientation="Horizontal" Margin="60,85,0,0"
+                                HorizontalAlignment="Left" VerticalAlignment="Top">
+
+                <!--文字：项目文件-->
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left"
+                                   Text="{Binding ElementName=ConvertUiUserControl,Path=LocationString}"
+                                   FontFamily="{StaticResource ZcoolButter.FontFamily}"
+                                   FontSize="22" Foreground="#c0c0c0"/>
+
+                <!--按钮：浏览-->
+                <local:ImageButtonControl Width="46" Height="40"
+                                                  Margin="35,0,0,0"
+                                                  VerticalAlignment="Top"
+                                                  PressAnimationSize="0.85,0.85"
+                                                  MouseEnterImage="{DynamicResource OtherUi.BrowseButton.MouseEnter.ImageBrush}"
+                                                  MouseLeaveImage="{DynamicResource OtherUi.BrowseButton.MouseLeave.ImageBrush}"
+                                              
+                                                  Click="BrowseButtonControl_Click"/>
+
+                <!--TextBox：地址-->
+                <TextBox Text="{Binding ElementName=ConvertUiUserControl,Path=PathString}"
+                                 MaxWidth="300" MaxHeight="42"
+                                 Padding="10,4,15,0" Margin="0,0,10,0"
+                                 Visibility="Visible"
+                             
+                                 BorderThickness="0"
+                                 SelectionBrush ="Gray"
+                                 VerticalContentAlignment="Center"
+                                 FontFamily="{StaticResource ZcoolLiterary.FontFamily}"
+                                 FontSize="16" 
+                                 Background="Transparent" Foreground="#FFA8A8A8"
+                                 TextWrapping="Wrap"
+                                 IsReadOnly="True"
+                                 VerticalScrollBarVisibility="Auto"/>
+
+
+            </StackPanel>
+
+
+            <!--文本框：Tip-->
+            <TextBlock Name="TipTextBlock"
+                           Margin="40,60,0,0"
+                           HorizontalAlignment="Left" VerticalAlignment="Top"
+                           Text="{Binding ElementName=ConvertUiUserControl,Path=TipString}"
+                           Opacity="0.8"
+                           FontFamily="{StaticResource ZcoolLiterary.FontFamily}"
+                           FontSize="18" Padding="5,4,5,0" Foreground="#852a2a"/>
+
+
+
+            <!--图片：说明-->
+            <Border Width="445" Height="171" Margin="80,200,0,0"
+                        HorizontalAlignment="Left" VerticalAlignment="Top"
+                        Background="{DynamicResource ConvertUi.Text.Tip.ImageBrush}"
+                        IsHitTestVisible="False"/>
+
+
+            <!--协同合作模式-->
+            <StackPanel Orientation="Horizontal"
+                            Margin="60,150,0,0"
+                            HorizontalAlignment="Left" VerticalAlignment="Top">
+
+                <!--图片：是否是协同合作模式？-->
+                <TextBlock Margin="0,6,0,0"
+                                VerticalAlignment="Center" HorizontalAlignment="Left"
+                                   Text="{Binding ElementName=ConvertUiUserControl,Path=CollaborationModeString}"
+                                   FontFamily="{StaticResource ZcoolButter.FontFamily}"
+                                   FontSize="22" Foreground="#c0c0c0"/>
+
+
+                <!--Check：是否是协同合作模式？-->
+                <local:ImageCheckControl x:Name="IsCollaborationModeCheckControl"
+                                             Width="33" Height="35" Margin="22,0,0,0"
+                                             HorizontalAlignment="Left" VerticalAlignment="Center"
+                                             MouseLeaveImage="{DynamicResource OtherUi.Check.Uncheck.ImageBrush}"
+                                             MouseEnterImage="{DynamicResource OtherUi.Check.Uncheck.ImageBrush}"
+                                             CheckedImage="{DynamicResource OtherUi.Check.Checked.ImageBrush}"
+                                             IsChecked="{Binding ElementName=ConvertUiUserControl,Path=IsCollaborationMode,Mode=TwoWay}"/>
+            </StackPanel>
+
+
+
+
+        </Grid>
+
+
+        <!--右边按钮-->
+        <StackPanel Width="83" Margin="572,-270,0,0"
+                        HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <!--按钮：确定-->
+            <local:YesButtonControl Width="73" Height="62" Margin="0,0,0,0"
+                                        PressAnimationSize="0.85,0.85"
+                                        MouseLeaveImage="{DynamicResource MainUi.YesButton.MouseLeave.ImageBrush}"
+                                        MouseEnterImage="{DynamicResource MainUi.YesButton.MouseEnter.ImageBrush}"
+                                        HorizontalAlignment="Right"
+                                            
+                                        Click="YesButtonControl_Click"/>
+
+            <!--按钮：取消-->
+            <local:NoButtonControl Width="70" Height="57" Margin="2,3,0,0"
+                                       PressAnimationSize="0.85,0.85"
+                                       MouseLeaveImage="{DynamicResource MainUi.NoButton.MouseLeave.ImageBrush}"
+                                       MouseEnterImage="{DynamicResource MainUi.NoButton.MouseEnter.ImageBrush}"
+                                           
+                                       Click="NoButtonControl_Click"/>
+
+        </StackPanel>
+
+
+
+        <!--前景：灰色-->
+        <Grid Name="ForegroundCanvas" 
+              Opacity="0.75"
+              Visibility="Collapsed">
+
+            <!--背景：白色-->
+            <Border Width="580" Height="420" 
+                    VerticalAlignment="Center"
+                    Background="Black" CornerRadius="14"
+                    Opacity="1"/>
+
+            <!--按钮：上面-->
+            <StackPanel Width="83" Margin="573,-270,0,0"
+                        HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                <!--按钮：最小化-->
+                <Border Width="73" Height="62" Margin="0,0,0,0"
+                        HorizontalAlignment="Right"
+                        Background="{DynamicResource MainUi.Foreground.YesButton.ImageBrush}"/>
+
+                <!--按钮：关闭-->
+                <local:NoButtonControl Width="70" Height="57" Margin="1,3,0,0"
+                                       Background="{DynamicResource MainUi.Foreground.NoButton.ImageBrush}"/>
+
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+
+</UserControl>

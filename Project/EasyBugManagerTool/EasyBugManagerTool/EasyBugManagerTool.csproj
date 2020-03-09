@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{72A6E490-1B7E-4F9A-9F67-B4EAFAF18E33}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EasyBugManagerTool</RootNamespace>
+    <AssemblyName>EasyBugManagerTool</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Asset\Icon\Icon128.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LitJSON, Version=0.16.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LitJson.0.16.0\lib\net45\LitJSON.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AppManager.cs" />
+    <Compile Include="Code\Datas.cs" />
+    <Compile Include="Code\Data\BaseData\BugBaseData.cs" />
+    <Compile Include="Code\Data\BaseData\ProjectBaseData.cs" />
+    <Compile Include="Code\Data\BaseData\RecordBaseData.cs" />
+    <Compile Include="Code\Data\OtherData.cs" />
+    <Compile Include="Code\Data\SettingsData.cs" />
+    <Compile Include="Code\Other\Enums.cs" />
+    <Compile Include="Code\Systems.cs" />
+    <Compile Include="Code\System\AudioSystem.cs" />
+    <Compile Include="Code\System\ConvertSystem.cs" />
+    <Compile Include="Code\System\LanguageSystem.cs" />
+    <Compile Include="Code\System\RepairSystem.cs" />
+    <Compile Include="Code\System\SaveSystem.cs" />
+    <Compile Include="Code\Tool\AnimationTool.cs" />
+    <Compile Include="Code\Tool\DateTimeTool.cs" />
+    <Compile Include="Code\Uis.cs" />
+    <Compile Include="Code\Ui\BrowseUi.cs" />
+    <Compile Include="Code\Ui\ConvertUi.cs" />
+    <Compile Include="Code\Ui\MainUi.cs" />
+    <Compile Include="Code\Ui\RepairUi.cs" />
+    <Compile Include="Code\Ui\SettingsUi.cs" />
+    <Compile Include="Code\Ui\TipUi.cs" />
+    <Compile Include="Xaml\Control\Base\ColorButtonControl.xaml.cs">
+      <DependentUpon>ColorButtonControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Xaml\Control\Base\ColorCheckControl.xaml.cs">
+      <DependentUpon>ColorCheckControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Xaml\Control\Base\ImageButtonControl.xaml.cs">
+      <DependentUpon>ImageButtonControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Xaml\Control\Base\ImageCheckControl.xaml.cs">
+      <DependentUpon>ImageCheckControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Xaml\Control\Base\ImageCheckGroupControl.xaml.cs">
+      <DependentUpon>ImageCheckGroupControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Xaml\Control\Perfab\ConvertButtonControl.xaml.cs">
+      <DependentUpon>ConvertButtonControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Xaml\Control\Perfab\NoButtonControl.xaml.cs">
+      <DependentUpon>NoButtonControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Xaml\Control\Perfab\RepairButtonControl.xaml.cs">
+      <DependentUpon>RepairButtonControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Xaml\Control\Perfab\SettingButtonControl.xaml.cs">
+      <DependentUpon>SettingButtonControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Xaml\Control\Perfab\YesButtonControl.xaml.cs">
+      <DependentUpon>YesButtonControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Xaml\Control\Ui\BrowseUiControl.xaml.cs">
+      <DependentUpon>BrowseUiControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Xaml\Control\Ui\ConvertUiControl.xaml.cs">
+      <DependentUpon>ConvertUiControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Xaml\Control\Ui\MainUiControl.xaml.cs">
+      <DependentUpon>MainUiControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Xaml\Control\Ui\SettingsUiControl.xaml.cs">
+      <DependentUpon>SettingsUiControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Xaml\Control\Ui\TipUiControl.xaml.cs">
+      <DependentUpon>TipUiControl.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Xaml\Control\Base\ColorButtonControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Xaml\Control\Base\ColorCheckControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Xaml\Control\Base\ImageButtonControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Xaml\Control\Base\ImageCheckControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Xaml\Control\Base\ImageCheckGroupControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Xaml\Control\Perfab\ConvertButtonControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Xaml\Control\Perfab\NoButtonControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Xaml\Control\Perfab\RepairButtonControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Xaml\Control\Perfab\SettingButtonControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Xaml\Control\Perfab\YesButtonControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Xaml\Control\Ui\BrowseUiControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Xaml\Control\Ui\ConvertUiControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Xaml\Control\Ui\MainUiControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Xaml\Control\Ui\SettingsUiControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Xaml\Control\Ui\TipUiControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Xaml\Dictionary\ChineseTextDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Xaml\Dictionary\ConverterDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Xaml\Dictionary\EnglishTextDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Xaml\Dictionary\FontDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Xaml\Dictionary\ImageDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Xaml\Style\Button\NoBackgroundButtonDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="Asset\Font\zcoolqingkehuangyouti-Regular.otf" />
+    <Resource Include="Asset\Font\zcoolwenyiti-Regular.otf" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Asset\Audio\ButtonDown.wav" />
+    <Content Include="Asset\Audio\ButtonUp.wav" />
+    <Resource Include="Asset\Icon\Icon128.ico" />
+    <Resource Include="Asset\Icon\Icon64.ico" />
+    <Resource Include="Asset\Image\ConvertUi\Text-Tip-CN.png" />
+    <Resource Include="Asset\Image\ConvertUi\Text-Tip-EN.png" />
+    <Resource Include="Asset\Image\MainUi\Bear.png" />
+    <Resource Include="Asset\Image\MainUi\ConvertButton-MouseEnter-CN.png" />
+    <Resource Include="Asset\Image\MainUi\ConvertButton-MouseEnter-EN.png" />
+    <Resource Include="Asset\Image\MainUi\ConvertButton-MouseLeave-CN.png" />
+    <Resource Include="Asset\Image\MainUi\ConvertButton-MouseLeave-EN.png" />
+    <Resource Include="Asset\Image\MainUi\Foreground-Logo.png" />
+    <Resource Include="Asset\Image\MainUi\Foreground-NoButton.png" />
+    <Resource Include="Asset\Image\MainUi\Foreground-SettingButton.png" />
+    <Resource Include="Asset\Image\MainUi\Foreground-YesButton.png" />
+    <Resource Include="Asset\Image\MainUi\Logo-CN.png" />
+    <Resource Include="Asset\Image\MainUi\Logo-EN.png" />
+    <Resource Include="Asset\Image\MainUi\MinimizeButton-MouseEnter.png" />
+    <Resource Include="Asset\Image\MainUi\MinimizeButton-MouseLeave.png" />
+    <Resource Include="Asset\Image\MainUi\NoButton-MouseEnter.png" />
+    <Resource Include="Asset\Image\MainUi\NoButton-MouseLeave.png" />
+    <Resource Include="Asset\Image\MainUi\RepairButton-MouseEnter-CN.png" />
+    <Resource Include="Asset\Image\MainUi\RepairButton-MouseEnter-EN.png" />
+    <Resource Include="Asset\Image\MainUi\RepairButton-MouseLeave-CN.png" />
+    <Resource Include="Asset\Image\MainUi\RepairButton-MouseLeave-EN.png" />
+    <Resource Include="Asset\Image\MainUi\SettingButton-MouseEnter.png" />
+    <Resource Include="Asset\Image\MainUi\SettingButton-MouseLeave.png" />
+    <Resource Include="Asset\Image\MainUi\YesButton-MouseEnter.png" />
+    <Resource Include="Asset\Image\MainUi\YesButton-MouseLeave.png" />
+    <Resource Include="Asset\Image\OtherUi\Browse-MouseEnter.png" />
+    <Resource Include="Asset\Image\OtherUi\Browse-MouseLeave.png" />
+    <Resource Include="Asset\Image\OtherUi\Check-Checked.png" />
+    <Resource Include="Asset\Image\OtherUi\Check-Uncheck.png" />
+    <Resource Include="Asset\Image\OtherUi\Null.png" />
+    <Resource Include="Asset\Image\Reference\20200203-1330 主界面.png" />
+    <Resource Include="Asset\Image\Reference\20200204-0624 设置界面.png" />
+    <Resource Include="Asset\Image\Reference\协同合作-5.png" />
+    <Resource Include="Asset\Image\Reference\导出Excel - CN.png" />
+    <Resource Include="Asset\Image\SettingsUi\Chinese-Checked-CN.png" />
+    <Resource Include="Asset\Image\SettingsUi\Chinese-Checked-EN.png" />
+    <Resource Include="Asset\Image\SettingsUi\Chinese-MouseEnter-CN.png" />
+    <Resource Include="Asset\Image\SettingsUi\Chinese-MouseEnter-EN.png" />
+    <Resource Include="Asset\Image\SettingsUi\Chinese-MouseLeave-CN.png" />
+    <Resource Include="Asset\Image\SettingsUi\Chinese-MouseLeave-EN.png" />
+    <Resource Include="Asset\Image\SettingsUi\CloseButton.png" />
+    <Resource Include="Asset\Image\SettingsUi\English-Checked-CN.png" />
+    <Resource Include="Asset\Image\SettingsUi\English-Checked-EN.png" />
+    <Resource Include="Asset\Image\SettingsUi\English-MouseEnter-CN.png" />
+    <Resource Include="Asset\Image\SettingsUi\English-MouseEnter-EN.png" />
+    <Resource Include="Asset\Image\SettingsUi\English-MouseLeave-CN.png" />
+    <Resource Include="Asset\Image\SettingsUi\English-MouseLeave-EN.png" />
+    <Resource Include="Asset\Image\SettingsUi\GithubButton.png" />
+    <Resource Include="Asset\Image\SettingsUi\Logo.png" />
+    <Resource Include="Asset\Image\SettingsUi\Off-Checked-CN.png" />
+    <Resource Include="Asset\Image\SettingsUi\Off-Checked-EN.png" />
+    <Resource Include="Asset\Image\SettingsUi\Off-MouseEnter-CN.png" />
+    <Resource Include="Asset\Image\SettingsUi\Off-MouseEnter-EN.png" />
+    <Resource Include="Asset\Image\SettingsUi\Off-MouseLeave-CN.png" />
+    <Resource Include="Asset\Image\SettingsUi\Off-MouseLeave-EN.png" />
+    <Resource Include="Asset\Image\SettingsUi\On-Checked-CN.png" />
+    <Resource Include="Asset\Image\SettingsUi\On-Checked-EN.png" />
+    <Resource Include="Asset\Image\SettingsUi\On-MouseEnter-CN.png" />
+    <Resource Include="Asset\Image\SettingsUi\On-MouseEnter-EN.png" />
+    <Resource Include="Asset\Image\SettingsUi\On-MouseLeave-CN.png" />
+    <Resource Include="Asset\Image\SettingsUi\On-MouseLeave-EN.png" />
+    <Resource Include="Asset\Image\SettingsUi\Option-Language-CN.png" />
+    <Resource Include="Asset\Image\SettingsUi\Option-Language-EN.png" />
+    <Resource Include="Asset\Image\SettingsUi\Option-Sound-CN.png" />
+    <Resource Include="Asset\Image\SettingsUi\Option-Sound-EN.png" />
+    <Resource Include="Asset\Image\SettingsUi\StaffButton.png" />
+    <Resource Include="Asset\Image\SettingsUi\StaffPanel.png" />
+    <Resource Include="Asset\Image\SettingsUi\Tool-CN.png" />
+    <Resource Include="Asset\Image\SettingsUi\Tool-EN.png" />
+    <Resource Include="Asset\Image\TipUi\Brackets-Left.png" />
+    <Resource Include="Asset\Image\TipUi\Brackets-Right.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

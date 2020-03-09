@@ -1,0 +1,91 @@
+﻿<!--App：Easy Bug Manager Tool
+    By：絮大王（XuDaWang）
+    Email：xudawang@vip.163.com
+    Steam：https://store.steampowered.com/app/1175080/Easy_Bug_Manager/
+    Github：https://github.com/xujiangjiang/Easy-Bug-Manager
+    Time：2020.02.04-->
+<Window x:Class="EasyBugManagerTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EasyBugManagerTool"
+        mc:Ignorable="d"
+
+        Title="Easy Bug Manager Tool"
+        Width="1000" Height="750"
+
+        ResizeMode="CanResize" WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True" WindowStyle="None" Background="Transparent"
+        
+        Loaded="MainWindow_OnLoaded">
+
+
+    <Grid>
+
+        <!--界面：主界面-->
+        <local:MainUiControl x:Name="MainUiControl"
+                             Visibility="Collapsed"
+
+                             ClickMinimizeButton="MainUiControl_ClickMinimizeButton"
+                             ClickCloseButton="MainUiControl_ClickCloseButton"
+                             ClickSettingButton="MainUiControl_ClickSettingButton"
+                             ClickRepairButton="MainUiControl_ClickRepairButton"
+                             ClickConvertButton="MainUiControl_ClickConvertButton"/>
+
+        <!--界面：设置-->
+        <local:SettingsUiControl x:Name="SettingsUiControl"
+                                 Margin="50,100,0,0"
+                                 Visibility="Collapsed"
+
+                                 Language="{Binding SettingsData.Language,Mode=TwoWay}"
+                                 Sound="{Binding SettingsData.Sound,Mode=TwoWay}"
+                                 
+                                 ClickCloseButton="SettingsUiControl_OnClickCloseButton"
+                                 ClickGithubButton="SettingsUiControl_OnClickGithubButton"
+                                 LanguageChange="SettingsUiControl_OnLanguageChange"
+                                 SoundChange="SettingsUiControl_OnSoundChange"/>
+
+        <!--界面：转换-->
+        <local:ConvertUiControl x:Name="ConvertUiControl"
+                                Margin="0,100,0,0"
+                                Visibility="Collapsed"
+                                
+                                ClickBrowseButton="ConvertUiControl_OnClickBrowseButton"
+                                ClickYesButton="ConvertUiControl_OnClickYesButton"
+                                ClickNoButton="ConvertUiControl_OnClickNoButton"/>
+
+        <!--界面：修复-->
+        <local:BrowseUiControl x:Name="RepairUiControl"
+                               Margin="0,50,0,0"
+                               Visibility="Collapsed"
+
+                               ClickBrowseButton="RepairUiControl_OnClickBrowseButton"
+                               ClickYesButton="RepairUiControl_OnClickYesButton"
+                               ClickNoButton="RepairUiControl_OnClickNoButton"/>
+
+        <!--界面：浏览-->
+        <local:BrowseUiControl x:Name="BrowseUiControl"
+                               Margin="0,100,0,0"
+                               Visibility="Collapsed"
+                               
+                               ClickBrowseButton="BrowseUiControl_OnClickBrowseButton"
+                               ClickYesButton="BrowseUiControl_OnClickYesButton"
+                               ClickNoButton="BrowseUiControl_OnClickNoButton"/>
+
+        <!--界面：Tip-->
+        <local:TipUiControl x:Name="TipUiControl"
+                            Visibility="Collapsed"
+                            Margin="0,160,0,0"
+
+                            IsShowYesButton="False"
+                            IsShowNoButton="True"
+                            
+                            ClickYesButton="TipUiControl_OnClickYesButton"
+                            ClickNoButton="TipUiControl_OnClickNoButton"/>
+
+
+    </Grid>
+
+
+</Window>
