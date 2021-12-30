@@ -38,7 +38,7 @@ Note: The repair may not be successful. Couldn't repair picture.
 
 Click the [Repair Project] button in the Tool to start repairing the project!
 
-![修复项目](/Image/1.png)
+![修复项目](./Image/1.png)
 
 <br/>
 
@@ -56,7 +56,7 @@ You can use the "Convert Project" features to convert the project.
 
 Click the [Convert Project] button in the Tool to start converting projects!
 
-![转换项目](/Image/2.png)
+![转换项目](./Image/2.png)
 
 <br/>
 
